@@ -59,11 +59,11 @@ const ProcessLearning = () => {
       name 
     }));
 
-    // Sheets - Character Sheets
+    // Sheets - Character Sheets (located in Roughs folder)
     const sheetsItems = [
-      'duckSHEET.jpg', 'expression sheet txt.jpg', 'IMG-20251030-WA0042.jpg'
+      'duckSHEET.jpg', 'expression sheet txt.jpg', 'expression sheet.jpg', 'IMG-20251030-WA0042.jpg'
     ].map(name => ({ 
-      path: `/VIP/Sheets/${name}`, 
+      path: `/VIP/Roughs/${name}`, 
       type: 'breakdown', 
       category: 'Character Sheets', 
       name 
@@ -82,9 +82,9 @@ const ProcessLearning = () => {
       name 
     }));
 
-    // MWS - Case Study video
+    // MWS - Case Study video (located in Roughs folder)
     const mwsVideo = { 
-      path: '/VIP/MWS/mrs strtbrd.mp4', 
+      path: '/VIP/Roughs/mrs strtbrd.mp4', 
       type: 'case-study', 
       category: 'Case Studies', 
       name: 'mrs strtbrd.mp4' 

@@ -33,12 +33,12 @@ const IllustrationGallery = () => {
       'DTIYS.jpg', 'grl w flwr.jpg', 'grl w flwr2.jpg', 'heeta.jpg', 'ii.jpg', 'illustration.jpg',
       'IMG-20251002-WA0014.jpg', 'IMG-20251002-WA0015.jpg', 'IMG-20251002-WA0018.jpg',
       'IMG-20251002-WA0019.jpg', 'IMG-20251002-WA0025.jpg', 'IMG-20251002-WA0026.jpg',
-      'IMG-20251030-WA0015.jpg', 'IMG-20251030-WA0017.jpg', 'IMG-20251030-WA0018.jpg',
+      'IMG-20251030-WA0017.jpg', 'IMG-20251030-WA0018.jpg',
       'IMG-20251030-WA0019.jpg', 'IMG-20251030-WA0020.jpg', 'IMG-20251030-WA0021.jpg',
       'IMG-20251030-WA0024.jpg', 'IMG-20251030-WA0027.jpg', 'IMG-20251030-WA0030.jpg',
       'IMG-20251030-WA0032.jpg', 'IMG-20251030-WA0033.jpg', 'IMG-20251030-WA0034.jpg',
       'IMG-20251030-WA0035.jpg', 'IMG-20251030-WA0037.jpg', 'IMG-20251103-WA0006.jpg',
-      'IMG-20251103-WA0007.jpg', 'kpop.jpg', 'oldman.jpg', 'pomm.jpg', 'pp.jpg',
+      'IMG-20251103-WA0007.jpg', 'kpop.jpg', 'oldman.jpg', 'pomm.jpg', 'pp.jpg', 'witch.jpg',
       'WhatsApp Image 2025-08-05 at 22.46.14_583e1099.jpg'
     ].map(name => ({ path: `/VIP/Illustration/${name}`, category: 'illustration', name }));
 
