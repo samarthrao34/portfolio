@@ -124,7 +124,7 @@ const Resume = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <a href="/vipshyana-resume.pdf" download className="download-button">
+            <a href="/Resume_Vipshyana.pdf" download className="download-button">
               Download Full Resume (PDF)
             </a>
           </motion.div>
