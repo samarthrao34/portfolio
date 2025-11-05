@@ -1,4 +1,11 @@
 {
   "buildCommand": "npm run build",
-  "framework": "vite"
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "routes": [
+    {
+      "src": "/Resume_Vipshyana.pdf",
+      "dest": "/Resume_Vipshyana.pdf"
+    }
+  ]
 }
