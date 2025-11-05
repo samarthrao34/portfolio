@@ -2,6 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Resume = () => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Resume_Vipshyana.pdf';
+    link.download = 'Vipshyana_Resume.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="resume" className="resume-section">
       <div className="container">
@@ -124,9 +134,9 @@ const Resume = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <a href="/Resume_Vipshyana.pdf" download className="download-button">
+            <button onClick={handleDownload} className="download-button">
               Download Full Resume (PDF)
-            </a>
+            </button>
           </motion.div>
         </motion.div>
       </div>
