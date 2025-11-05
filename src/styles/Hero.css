@@ -1,0 +1,419 @@
+/* Hero Section - Cozy Creative Brand */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(to bottom, #FFF8F0 0%, #FFE4E1 50%, #FFFAF5 90%, #FFF8F0 100%);
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.15) 0%, transparent 70%);
+  animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Animated Banner */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 3rem;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(255, 107, 157, 0.3),
+              0 8px 20px rgba(255, 182, 193, 0.2),
+              inset 0 0 30px rgba(255, 255, 255, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.6);
+}
+
+.hero-canvas {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #FFB6C1 0%, #FF69B4 25%, #FFA07A 50%, #FFB6C1 75%, #FF69B4 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.floating-element {
+  font-size: 4rem;
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 1));
+  text-shadow: 0 0 20px rgba(255, 182, 193, 0.8);
+}
+
+/* Hero Content */
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title-line {
+  background: linear-gradient(135deg, #FF6B9D 0%, #FF1493 25%, #C06C84 50%, #F67280 75%, #FFB6C1 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  font-family: 'Georgia', 'Playfair Display', serif;
+  letter-spacing: 0.02em;
+  filter: drop-shadow(0 0 15px rgba(255, 107, 157, 0.4))
+          drop-shadow(0 0 30px rgba(255, 107, 157, 0.3))
+          drop-shadow(0 5px 20px rgba(255, 107, 157, 0.2));
+  animation: shimmerGlow 3s ease-in-out infinite;
+}
+
+.title-line::before {
+  content: 'Bringing Stories to Life';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, #FF6B9D 0%, #FF1493 25%, #C06C84 50%, #F67280 75%, #FFB6C1 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: blur(20px);
+  opacity: 0.8;
+  animation: shimmerGlow 3s ease-in-out infinite;
+}
+
+@keyframes shimmerGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(255, 107, 157, 0.5))
+            drop-shadow(0 0 30px rgba(255, 107, 157, 0.3))
+            drop-shadow(0 5px 20px rgba(255, 107, 157, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(255, 107, 157, 0.7))
+            drop-shadow(0 0 40px rgba(255, 107, 157, 0.5))
+            drop-shadow(0 5px 30px rgba(255, 107, 157, 0.3));
+  }
+}
+
+.title-subtitle {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: #6C5B7B;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(108, 91, 123, 0.2);
+}
+
+.hero-intro {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: #5A5A5A;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.hero-intro strong {
+  color: #FF6B9D;
+  font-weight: 700;
+}
+
+/* Navigation Buttons */
+.hero-nav {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #FF6B9D, #F67280);
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4),
+              0 2px 8px rgba(255, 107, 157, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.nav-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.nav-btn:hover::before {
+  left: 100%;
+}
+
+.nav-btn:hover {
+  box-shadow: 0 8px 30px rgba(255, 107, 157, 0.6),
+              0 4px 15px rgba(255, 107, 157, 0.4);
+  transform: translateY(-3px) scale(1.02);
+}
+
+.nav-btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+.nav-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+
+/* Large desktops and TVs (1920px+) */
+@media (min-width: 1920px) {
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero-intro h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  .hero-intro p {
+    font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+  }
+
+  .nav-btn {
+    padding: 1.2rem 3rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* Desktops (1440px - 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .hero-intro h1 {
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+  }
+}
+
+/* Large tablets and small laptops (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .hero-content {
+    max-width: 1000px;
+  }
+
+  .hero-intro h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+
+  .hero-intro p {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+  }
+
+  .nav-btn {
+    padding: 1rem 2.2rem;
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    min-height: 85vh;
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .hero-intro h1 {
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+  }
+
+  .hero-intro p {
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+
+  .hero-nav {
+    gap: 1.5rem;
+  }
+
+  .nav-btn {
+    padding: 0.95rem 2rem;
+    font-size: 1.05rem;
+  }
+
+  .floating-element {
+    font-size: 3.5rem;
+    opacity: 0.05;
+  }
+}
+
+/* Tablets and small screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-banner {
+    height: 150px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-intro {
+    margin-bottom: 2rem;
+  }
+
+  .hero-intro h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero-intro p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .hero-nav {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .nav-btn {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .floating-element {
+    font-size: 3rem;
+    opacity: 0.04;
+  }
+}
+
+/* Mobile phones (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .hero-intro h1 {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+
+  .nav-btn {
+    padding: 0.85rem 1.8rem;
+    max-width: 280px;
+  }
+}
+
+/* Small mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 75vh;
+    padding: 2.5rem 1rem;
+  }
+
+  .hero-intro h1 {
+    font-size: clamp(1.4rem, 8vw, 2rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-intro p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .hero-nav {
+    gap: 1rem;
+  }
+
+  .nav-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .floating-element {
+    font-size: 2.5rem;
+  }
+}
+
+/* Extra small devices (max-width: 375px) */
+@media (max-width: 375px) {
+  .hero {
+    padding: 2rem 0.75rem;
+  }
+
+  .hero-intro h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-intro p {
+    font-size: 0.9rem;
+  }
+
+  .nav-btn {
+    padding: 0.7rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}

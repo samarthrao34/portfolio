@@ -1,0 +1,569 @@
+/* Contact Section - Cozy & Inviting */
+.contact-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom, #FFE4E1 0%, #FFD6E0 50%, #FFE4E1 100%);
+  position: relative;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.contact-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-content {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* CTA Message */
+.cta-message {
+  margin-bottom: 3rem;
+}
+
+.cta-box {
+  background: white;
+  padding: 3rem;
+  border-radius: 25px;
+  box-shadow: 0 10px 40px rgba(255, 107, 157, 0.15),
+              0 5px 20px rgba(255, 182, 193, 0.2);
+  text-align: center;
+  border: 3px solid #FFB6C1;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.1), transparent 50%);
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.cta-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FF6B9D;
+  margin-bottom: 1.5rem;
+}
+
+.cta-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #5A5A5A;
+  margin-bottom: 1.25rem;
+}
+
+.cta-text.warm {
+  color: #6C5B7B;
+  font-weight: 500;
+}
+
+/* Social Links Grid */
+.social-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.75rem;
+  background: white;
+  border-radius: 20px;
+  border: 2px solid #FFE4E1;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(255, 107, 157, 0.08);
+  color: inherit;
+}
+
+.social-card:visited {
+  color: inherit;
+}
+
+.social-card:link {
+  color: inherit;
+}
+
+.social-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--accent-color, #FF6B9D);
+  transform: scaleY(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-card:hover {
+  box-shadow: 0 8px 30px rgba(255, 107, 157, 0.2),
+              0 4px 15px rgba(255, 182, 193, 0.15);
+  transform: translateX(8px);
+  border-color: var(--accent-color, #FF6B9D);
+}
+
+.social-card:hover::before {
+  transform: scaleY(1);
+}
+
+.social-icon {
+  border-color: var(--accent-color, #FF6B9D);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(to right, #FFF, #FFF8F0);
+}
+
+.social-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.social-info {
+  flex: 1;
+}
+
+.social-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 0.3rem 0;
+}
+
+.social-handle {
+  font-size: 0.95rem;
+  color: #999;
+  margin: 0;
+  font-family: monospace;
+}
+
+.social-arrow {
+  font-size: 1.5rem;
+  color: var(--accent-color, #FF6B9D);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.social-card:hover .social-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Quick Contact Info */
+.quick-contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #FFF0F5, #E6F3FF);
+  border-radius: 25px;
+}
+
+.quick-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.contact-details h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FF6B9D;
+  margin: 0 0 0.25rem 0;
+}
+
+.contact-details p {
+  font-size: 0.95rem;
+  color: #5A5A5A;
+  margin: 0;
+}
+
+/* Email CTA */
+.email-cta {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.email-text {
+  font-size: 1.1rem;
+  color: #6C5B7B;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.email-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 3rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #FF6B9D, #F67280);
+  color: white !important;
+  text-decoration: none;
+  box-shadow: 0 6px 25px rgba(255, 107, 157, 0.4);
+  transition: all 0.3s ease;
+}
+
+.email-button:visited,
+.email-button:link {
+  color: white !important;
+}
+
+.email-button:hover {
+  box-shadow: 0 8px 35px rgba(255, 107, 157, 0.6);
+  transform: translateY(-2px);
+  color: white !important;
+}
+
+.email-icon {
+  font-size: 1.5rem;
+}
+
+/* Responsive */
+
+/* Large screens and TVs (1920px+) */
+@media (min-width: 1920px) {
+  .contact-section {
+    padding: 8rem 3rem;
+  }
+
+  .section-header h2 {
+    font-size: 3.5rem;
+  }
+
+  .section-header p {
+    font-size: 1.3rem;
+  }
+
+  .social-links-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .social-card {
+    padding: 2.25rem;
+  }
+
+  .social-icon {
+    font-size: 3rem;
+  }
+
+  .social-name {
+    font-size: 1.4rem;
+  }
+
+  .social-username {
+    font-size: 1.1rem;
+  }
+
+  .cta-box {
+    padding: 3.5rem 3rem;
+  }
+
+  .cta-title {
+    font-size: 2.5rem;
+  }
+
+  .email-button {
+    padding: 1.3rem 3rem;
+    font-size: 1.3rem;
+  }
+
+  .quick-contact {
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+}
+
+/* Large desktops (1440px - 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .contact-section {
+    padding: 7rem 2.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 3rem;
+  }
+
+  .social-links-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+  }
+
+  .social-card {
+    padding: 2rem;
+  }
+
+  .cta-box {
+    padding: 3rem;
+  }
+}
+
+/* Desktops and laptops (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .contact-section {
+    padding: 6rem 2rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.8rem;
+  }
+
+  .social-links-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .social-card {
+    padding: 1.75rem;
+  }
+
+  .cta-box {
+    padding: 2.75rem 2.5rem;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+  }
+}
+
+/* Tablets landscape (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact-section {
+    padding: 5rem 2rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .social-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  .social-card {
+    padding: 1.5rem;
+  }
+
+  .social-icon {
+    font-size: 2.5rem;
+  }
+
+  .cta-box {
+    padding: 2.5rem 2rem;
+  }
+
+  .quick-contact {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets portrait (max-width: 768px) */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+  }
+
+  .cta-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .cta-title {
+    font-size: 1.6rem;
+  }
+
+  .social-links-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .social-card {
+    padding: 1.5rem;
+  }
+
+  .social-icon {
+    font-size: 2.25rem;
+  }
+
+  .quick-contact {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  .email-button {
+    padding: 1rem 2.25rem;
+  }
+}
+
+/* Mobile landscape (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .social-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .social-card {
+    padding: 1.35rem;
+  }
+}
+
+/* Mobile portrait (max-width: 480px) */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 3.5rem 1rem;
+  }
+
+  .section-header {
+    padding: 2rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-box {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  .cta-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .social-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-card {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .social-icon {
+    font-size: 2rem;
+  }
+
+  .social-name {
+    font-size: 1.1rem;
+  }
+
+  .social-username {
+    font-size: 0.9rem;
+  }
+
+  .email-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .quick-contact {
+    padding: 1.25rem;
+  }
+
+  .quick-contact-item {
+    padding: 1rem;
+  }
+
+  .quick-contact-item h4 {
+    font-size: 1rem;
+  }
+
+  .quick-contact-item p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small devices (max-width: 375px) */
+@media (max-width: 375px) {
+  .contact-section {
+    padding: 3rem 0.75rem;
+  }
+
+  .section-header {
+    padding: 1.75rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .cta-title {
+    font-size: 1.4rem;
+  }
+
+  .social-card {
+    padding: 1.15rem;
+  }
+
+  .social-icon {
+    font-size: 1.85rem;
+  }
+
+  .social-name {
+    font-size: 1rem;
+  }
+
+  .email-button {
+    padding: 0.9rem 1.75rem;
+    font-size: 0.95rem;
+  }
+
+  .quick-contact {
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
